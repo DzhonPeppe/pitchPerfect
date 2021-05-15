@@ -16,20 +16,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tap to Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9g-fR-2yw">
-                                <rect key="frame" x="154" y="471" width="106" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9g-fR-2yw">
+                                <rect key="frame" x="154" y="488" width="106" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4NM-VX-RLK">
-                                <rect key="frame" x="154" y="500" width="106" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Stop Recording"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dN5-AL-Ysv">
-                                <rect key="frame" x="130" y="427" width="155" height="42"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dN5-AL-Ysv">
+                                <rect key="frame" x="182.5" y="433" width="49" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Record">
                                     <color key="titleColor" systemColor="labelColor"/>
@@ -38,12 +32,24 @@
                                     <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6KZ-N7-0ka"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4NM-VX-RLK">
+                                <rect key="frame" x="154" y="534" width="106" height="30"/>
+                                <state key="normal" title="Stop Recording"/>
+                                <connections>
+                                    <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="and-80-dNg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="dN5-AL-Ysv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C7F-78-Fnx"/>
-                            <constraint firstItem="dN5-AL-Ysv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mFm-Nr-xs8"/>
+                            <constraint firstItem="e9g-fR-2yw" firstAttribute="centerX" secondItem="dN5-AL-Ysv" secondAttribute="centerX" id="8hI-GE-AeM"/>
+                            <constraint firstItem="4NM-VX-RLK" firstAttribute="centerX" secondItem="e9g-fR-2yw" secondAttribute="centerX" id="U6N-SQ-RL8"/>
+                            <constraint firstItem="4NM-VX-RLK" firstAttribute="top" secondItem="e9g-fR-2yw" secondAttribute="bottom" constant="25" id="UgT-os-xqZ"/>
+                            <constraint firstItem="4NM-VX-RLK" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="daX-bZ-jH5"/>
+                            <constraint firstItem="e9g-fR-2yw" firstAttribute="top" secondItem="dN5-AL-Ysv" secondAttribute="bottom" constant="25" id="fFP-8u-m4A"/>
+                            <constraint firstItem="dN5-AL-Ysv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vnv-ID-L7v"/>
+                            <constraint firstItem="dN5-AL-Ysv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zA7-gr-lge"/>
                         </constraints>
                     </view>
                     <connections>
