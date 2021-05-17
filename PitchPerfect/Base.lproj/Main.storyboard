@@ -74,8 +74,70 @@
                     <view key="view" contentMode="scaleToFill" id="XPk-5X-Nid">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UMF-6B-g90" userLabel="Stop Button">
+                                <rect key="frame" x="175" y="782" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="N3H-zF-JBG"/>
+                                    <constraint firstAttribute="height" constant="64" id="jyg-te-lLq"/>
+                                </constraints>
+                                <state key="normal" image="Stop"/>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="FIr-KY-3zf">
+                                <rect key="frame" x="0.0" y="88" width="414" height="694"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="tt4-CZ-uc1">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="231.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWc-4A-sun" userLabel="Slow Button">
+                                                <rect key="frame" x="0.0" y="0.0" width="207" height="231.5"/>
+                                                <state key="normal" image="Slow"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ba-t4-XuB" userLabel="Fast Button">
+                                                <rect key="frame" x="207" y="0.0" width="207" height="231.5"/>
+                                                <state key="normal" image="Fast"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4N4-Aq-UKD">
+                                        <rect key="frame" x="0.0" y="231.5" width="414" height="231"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="llJ-5b-WLL" userLabel="Low Pitch Button">
+                                                <rect key="frame" x="0.0" y="0.0" width="207" height="231"/>
+                                                <state key="normal" image="HighPitch"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tqp-Ef-3Tr" userLabel="High Pitch Button">
+                                                <rect key="frame" x="207" y="0.0" width="207" height="231"/>
+                                                <state key="normal" image="LowPitch"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="6MF-bN-2RU">
+                                        <rect key="frame" x="0.0" y="462.5" width="414" height="231.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbP-8Y-Fa8" userLabel="Echo Button">
+                                                <rect key="frame" x="0.0" y="0.0" width="207" height="231.5"/>
+                                                <state key="normal" image="Echo"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIy-VH-xWf" userLabel="Reverb Button">
+                                                <rect key="frame" x="207" y="0.0" width="207" height="231.5"/>
+                                                <state key="normal" image="Reverb"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="MGe-2S-WJD"/>
-                        <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UMF-6B-g90" firstAttribute="top" secondItem="FIr-KY-3zf" secondAttribute="bottom" id="4ta-sv-Unu"/>
+                            <constraint firstItem="UMF-6B-g90" firstAttribute="centerX" secondItem="FIr-KY-3zf" secondAttribute="centerX" id="EU2-PN-ESj"/>
+                            <constraint firstItem="MGe-2S-WJD" firstAttribute="trailing" secondItem="FIr-KY-3zf" secondAttribute="trailing" id="FkV-fP-zfH"/>
+                            <constraint firstItem="FIr-KY-3zf" firstAttribute="top" secondItem="MGe-2S-WJD" secondAttribute="top" id="VdF-Lw-DbV"/>
+                            <constraint firstItem="FIr-KY-3zf" firstAttribute="leading" secondItem="MGe-2S-WJD" secondAttribute="leading" id="XFM-xq-YMe"/>
+                            <constraint firstItem="MGe-2S-WJD" firstAttribute="bottom" secondItem="UMF-6B-g90" secondAttribute="bottom" constant="16" id="s3N-e2-PyU"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1mj-SV-WFu"/>
                 </viewController>
@@ -103,7 +165,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Echo" width="90" height="90"/>
+        <image name="Fast" width="90" height="90"/>
+        <image name="HighPitch" width="90" height="90"/>
+        <image name="LowPitch" width="90" height="90"/>
         <image name="RecordButton" width="155" height="155"/>
+        <image name="Reverb" width="90" height="90"/>
+        <image name="Slow" width="90" height="90"/>
         <image name="Stop" width="155" height="155"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
